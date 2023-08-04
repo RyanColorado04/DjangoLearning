@@ -25,3 +25,7 @@ urlpatterns = [
     # path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path("", include("pages.urls")),
 ]
+
+
+
+handler404 = 'pages.views.custom_404'
