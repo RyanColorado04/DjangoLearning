@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ps0fro&wsbahf04$=bu!^*j(zr^lhvsr419mr4j94br73_zk4q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # my apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'dollblog.apps.DollblogConfig',
 
     # 3rd party apps
     'crispy_forms',

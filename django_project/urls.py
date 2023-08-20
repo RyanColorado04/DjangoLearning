@@ -22,10 +22,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
-    # path("", TemplateView.as_view(template_name="home.html"), name="home"),
+    path("dolls/", include("dollblog.urls")),
     path("", include("pages.urls")),
 ]
 
 
 
-handler404 = 'pages.views.custom_404'
+#handler404 = 'pages.views.custom_404'

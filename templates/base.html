@@ -3,7 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Kinsey Pink{% endblock title %}</title>
+  {% if title %}
+    <title>Kinsey Pink - {{ title }}</title>
+  {% else %}
+  <title>Kinsey Pink</title>
+  {% endif %}
+
   <meta name="viewport" content="width=device-width,
   initial-scale=1, shrink-to-fit=no">
 
@@ -16,7 +21,11 @@
   <header class="p-3 mb-3 border-bottom">
     <div class="d-flex flex-wrap align-items-center justify-content-center
         justify-content-lg-start">
-      <a class="navbar-brand" href="{% url 'home' %}">Kinsey Pink</a>
+      {% if title %}
+        <a class="navbar-brand" href="{% url 'home' %}">Kinsey Pink- {{ title }}</a>
+      {% else %}
+        <a class="navbar-brand" href="{% url 'home' %}">Kinsey Pink</a>
+      {% endif %}
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center
           mb-md-0">
 
